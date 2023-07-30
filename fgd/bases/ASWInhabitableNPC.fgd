@@ -1,0 +1,14 @@
+@BaseClass base(BaseNPC)
+	appliesto(ASRD)
+= ASWInhabitableNPC
+	[
+		flammable(boolean) : "Flammable" : 1
+		teslable(boolean) : "Teslable" : 1
+		freezable(boolean) : "Freezable" : 1
+		freezeresistance(float) : "Freeze resistance" : 0
+		flinchable(boolean) : "Flinches" : 0
+		reflector(boolean) : "Grenade reflector" : 0
+		healthbonus(integer) : "Health bonus" : 0
+		sizescale(float) : "Size scale" : 1
+		speedscale(float) : "Speed scale" : 1
+	]

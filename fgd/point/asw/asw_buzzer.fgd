@@ -1,4 +1,4 @@
-@NpcClass base(BaseNPC) 
+@NpcClass base(BaseNPC, ASWInhabitableNPC) 
 	appliesto(ASW) 
 	studio("models/swarm/Buzzer/buzzer.mdl") = asw_buzzer: "Buzzer"
 	[

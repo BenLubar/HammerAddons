@@ -1,4 +1,4 @@
-@BaseClass base(BaseNPC, EZ2Variant) = BaseHeadcrab
+@BaseClass base(BaseNPC, EZ2Variant, ASWInhabitableNPC) = BaseHeadcrab
 	[
 	startburrowed(boolean) : "Start burrowed" : 0
 

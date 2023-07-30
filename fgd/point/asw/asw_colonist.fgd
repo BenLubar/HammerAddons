@@ -1,9 +1,21 @@
 
-@NpcClass base(BaseNPC, TalkNPC, PlayerCompanion) 
+@NpcClass base(BaseNPC, TalkNPC, PlayerCompanion, ASWInhabitableNPC) 
 	appliesto(ASW) 
 	studio("models/swarm/Colonist/Male/MaleColonist.mdl") = asw_colonist: "Colonist"
 	[
+	gender[ASRD](choices) : "Gender" : 0 : "Used to decide a random model if no model is set." =
+	[
+		0 : "Random"
+		1 : "Male"
+		2 : "Female"
+	]
 	notifynavfailblocked(boolean) : "Fire output when Nav is blocked?" : 0
+
+	// Inputs
+	input GiveWeapon[ASRD](string) : "Gives the NPC a weapon of the specified class name. They will drop their current weapon if it is not holstered."
+
+	// Outputs
+	output OnNavFailBlocked(void) : "Fires when this Colonist's movement fails because they are blocked."
 
 	@resources
 		[

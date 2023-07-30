@@ -1,4 +1,4 @@
-@BaseClass = CombineScanner
+@BaseClass base(ASWInhabitableNPC) = CombineScanner
 	[
 	spawnflags(flags) : "spawnflags" =
 		[

@@ -1,4 +1,4 @@
-@BaseClass base(BaseNPC) 
+@BaseClass base(BaseNPC, ASWInhabitableNPC) 
 	line(255 255 255, targetname, moveclone)
 	appliesto(ASW) 
 = asw_alien: "Alien Base class."

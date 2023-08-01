@@ -5,10 +5,21 @@
 	[
 	objectivetitle(string) : "Objective Title" : : "Title to use for this objective in the list on the briefing screen, or in-game for the current objective HUD display."
 	countdownlength(float) : "Countdown Length" : 60 : "How many seconds before the level explodes."
+	WarningText[ASRD](string) : "Warning Text" : "" : "Text to show on the HUD when the countdown starts. Default is WARNING."
+	CaptionText[ASRD](string) : "Caption Text" : "" : "The caption for the countdown on the HUD. Default is NUCLEAR DETONATION IMMINENT."
+	Sound60[ASRD](sound) : "60 Second Warning" : "" : "Sound to play when 63 seconds remain."
+	Sound30[ASRD](sound) : "30 Second Warning" : "" : "Sound to play when 33 seconds remain."
+	Sound10[ASRD](sound) : "10 Second Warning" : "" : "Sound to play when 13 seconds remain."
+	SoundFail[ASRD](sound) : "Failure Sound 1" : "" : "First sound to play when objective fails."
+	SoundFailLF[ASRD](sound) : "Failure Sound 2" : "" : "Second sound to play when objective fails. Played simultaneously with first."
+	StatsMusicFailure[ASRD](sound) : "Debriefing Music" : "asw_song.StatsFailNuked" : "Music to play during debriefing if the mission fails due to this requirement."
+	FailColor[ASRD](color255) : "Fade To Color" : "" : "Fade to this color when the objective fails."
 
 	// Inputs
 	input StartCountdown(void) : "Start Countdown"
 	input CancelCountdown(void) : "Cancel Countdown"
+	input StatsMusicFailure[ASRD](string) : "Overrides the music that plays during debriefing."
+
 
 	// Outputs
 	output OnCountdownFailed(void) : "Fired when the countdown timer reaches 0."

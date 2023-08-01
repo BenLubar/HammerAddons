@@ -2,6 +2,7 @@
 	appliesto(ASW) 
 	iconsprite("editor/info_target.vmt") = asw_stylincam: "Inputs for stylin cam."
 	[
+	CommanderFace[ASRD](string) : "Commander Face Texture" : "briefing/face_pilot" : "The texture for the commander's face when activated via this entity. Should be a vmt file inside materials/vgui/"
 
 	// Inputs
 	input ShowStylinCam(void) : "Turns on the Stylin Cam."

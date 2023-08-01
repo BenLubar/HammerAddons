@@ -1,5 +1,6 @@
+@BaseClass appliesto(ASRD) base(Angles) = _asw_marker_angles []
 
-@PointClass base(BaseEntityPoint, EnableDisable) 
+@PointClass base(BaseEntityPoint, EnableDisable, _asw_marker_angles)
 	appliesto(ASW) 
 	iconsprite("editor/asw_objective_dummy.vmt") = asw_marker: "Alien Swarm Mission Marker"
 	[
@@ -9,6 +10,7 @@
 
 	// Inputs
 	input SetComplete(void) : "Mark as complete."
+	input SetIncomplete[ASRD](void) : "Mark as incomplete."
 
 	@resources []
 	]

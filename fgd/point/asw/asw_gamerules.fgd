@@ -5,5 +5,38 @@
 	speedruntime(integer) : "Speedrun time" : 180 : "Speed run time in seconds.  Players must complete the mission within this time to unlock Uber mode."
 	speedruntimesp(integer) : "Speedrun time singleplayer" : 0 : "Speed run time in seconds specifically for singleplayer.  If this is set to 0, then the normal Speedrun Time setting is used."
 
+	jumpjettype[+engine, ASRD](integer) : "Jump Jet and Blink path finding" : 0
+	jumpjettype[ASRD](choices) : "Jump Jet and Blink path finding" : 0 : "This setting controls which nodes marine can do jump jet to. Before jumping server builds a route to destination node. If route exists and is valid then jump is performed. Use ai_show_connect to see ground links, ai_show_connect_jump to see ground and jump links. asw_debug_blink. Ground routes only(0) player can only jump on the node which is nearest to mouse position and there is a ground route to this node not blocked by closed doors or brushes. Ground and jump routes(1) same as (0) but 'jump links' between nodes are considered valid for building routes, so players can jump over a hole or steep. Allow jump everywhere(2) just allows to jump on any surface or prop, but not on a surface which is inside a playerclip or clip brush. Make sure you cover non jumpable areas with playerclip brushes. Jump no matter what(3) finds the nearest node to mouse position and jumps to it. The jump will always be performed no matter what. Used for survival maps where jumping saves lives. " =
+	[
+		0 : "Ground routes only"
+		1 : "Ground and jump routes"
+		2 : "Allow jump everywhere"
+		3 : "Jump no matter what"
+	]
+	disallowcamerarotation[+engine, ASRD](integer) : "Camera Rotation" : 0
+	disallowcamerarotation[ASRD](choices) : "Camera Rotation" : 0 : "Allow players to rotate the camera using rotatecameraleft and rotatecameraright." =
+	[
+		0 : "Allow rotation"
+		1 : "Deny rotation"
+	]
+	briefingmovie[ASRD](string) : "Briefing Background Movie" : "" : "The name of the BIK file in the media folder to play behind the briefing for this mission. The movie is hidden if an rd_briefing_camera entity exists, and paused if rd_reduce_motion is enabled. If empty, the game will randomly pick between BGFX_01, BGFX_02, BGFX_03, and BG_04_FX."
+	StatsMusicSuccess[ASRD](sound) : "Debriefing Music (Success)" : "" : "Overrides the music that plays during debriefing. If empty, this will use asw_song.StatsSuccess, or asw_song.StatsSuccessCampaign if it is the last mission of a campaign."
+	StatsMusicFailure[ASRD](sound) : "Debriefing Music (Failure)" : "" : "Overrides the music that plays during debriefing. If empty, this will use asw_song.StatsFail."
+
+	// Inputs
+	input SetTutorialStage[ASRD](integer) : "reset the tutorial to a different spawn; only works on the tutorial level"
+	input AddPoints[ASRD](integer) : "Award points to the players. Only works if the mission is in progress and the mission overview is tagged with 'points'."
+	input ModifyDifficulty[ASRD](integer) : "Modify the mission difficulty level during gameplay. This does NOT affect health for already-spawned aliens. Normal difficulty is 5, brutal is 13. Only works if the mission is in progress. Difficulty level cannot go below 2 or above 10 million."
+	input MarineFinishedMission[ASRD](target_destination) : "Mark a marine as having finished the mission independely of their team, for speedrun leaderboards."
+	input StatsMusicSuccess[ASRD](string) : "Overrides the music that plays during debriefing."
+	input StatsMusicFailure[ASRD](string) : "Overrides the music that plays during debriefing."
+	// Outputs
+	output OnDifficulty[ASRD](integer) : "On mission start, 1=Easy, 2=Normal, 3=Hard, 4=Insane, 5=Brutal"
+	output OnOnslaught[ASRD](integer) : "On mission start, 0=Normal, 1=Onslaught"
+	output OnFriendlyFire[ASRD](integer) : "On mission start, 0=Normal, 1=Hardcore"
+	output OnChallenge[ASRD](string) : "On mission start, the challenge filename or 0 for no challenge."
+	output TotalPoints[ASRD](integer) : "Called when score changes"
+	output MissionDifficulty[ASRD](integer) : "Called when computed mission difficulty changes. Not to be confused with OnDifficulty."
+
 	@resources []
 	]

@@ -15,6 +15,10 @@
 	input EnableWanderers(void) : "Enable random wandering aliens."
 	input DisableWanderers(void) : "Disable random wandering aliens."
 	input StartFinale(void) : "Enables wanderers, hordes and sends director into crazy spawning mode."
+	input StartHoldout[ASRD](void) : "Enables wanderers, hordes and sends director into crazy spawning mode."
+	input StopHoldout[ASRD](void) : "Reverts to pre-holdout state of wanderers and hordes."
+	input ResetMarineIntensity[ASRD](void) : "Sets the intensity value for all marines to 0, allowing the director to spawn aliens again sooner."
+	input SpawnHordeSoon[ASRD](void) : "Tries to spawn a horde within the next few seconds. Hordes must be enabled for this to have any effect."
 
 	// Outputs
 	output OnEscapeRoomStart(void) : "Fired when marine enters the escape room with all objectives (except for escape) complete. " +

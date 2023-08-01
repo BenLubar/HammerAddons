@@ -12,11 +12,13 @@
 	input AddHealth(integer) : "Adds health to the breakable. If the breakable's health reaches zero it will break."
 	input RemoveHealth(integer) : "Removes health from the breakable. If the breakable's health reaches zero it will break."
 	input SetMass(float) : "Set mass of this object."
+	input Burst(void) : "Cause the barrel to start emitting gas."
 
 	// Outputs
 	output OnBreak(void) : "Fired when this breakable breaks."
 	output OnTakeDamage(void) : "Fired each time this breakable takes any damage."
 	output OnHealthChanged(float) : "Fired when the health of this breakable changes, passing the new value of health as a percentage of max health, from [0..1]."
+	output OnBurst[ASRD](void) : "Fired when the barrel starts emitting gas."
 
 	@resources
 		[

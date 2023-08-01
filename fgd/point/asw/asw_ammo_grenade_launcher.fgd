@@ -1,0 +1,10 @@
+
+@PointClass base(ASWPickup) 
+	appliesto(ASRD) 
+	studio("models/swarm/ammo/ammogrenadelauncher.mdl") = asw_ammo_grenade_launcher: "Box of Grenade Launcher ammo"
+	[
+	@resources
+		[
+		model "models/swarm/ammo/ammogrenadelauncher.mdl"
+		]
+	]

@@ -1,0 +1,10 @@
+
+@PointClass base(ASWPickup) 
+	appliesto(ASRD) 
+	studio("models/swarm/ammo/ammosniperrifle.mdl") = asw_ammo_sniper_rifle: "Box of Sniper Rifle ammo"
+	[
+	@resources
+		[
+		model "models/swarm/ammo/ammosniperrifle.mdl"
+		]
+	]

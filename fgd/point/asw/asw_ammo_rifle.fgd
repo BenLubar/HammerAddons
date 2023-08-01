@@ -3,6 +3,8 @@
 	appliesto(ASW) 
 	studio("models/swarm/ammo/ammoassaultrifle.mdl") = asw_ammo_rifle: "Box of Rifle ammo"
 	[
+		AddSecondary[ASRD](boolean) : "Add secondary item" : 1 : "If set this pickup adds secondary fire charge"
+
 	@resources
 		[
 		model "models/swarm/Ammo/ammoassaultrifle.mdl"

@@ -1,0 +1,12 @@
+
+@PointClass base(ASWPickup) 
+	appliesto(ASRD) 
+	studio("models/swarm/ammo/ammohvyrifle.mdl") = asw_ammo_heavy_rifle: "Box of Heavy Rifle ammo"
+	[
+		AddSecondary(boolean) : "Add secondary item" : 1 : "If set this pickup adds secondary fire charge"
+
+	@resources
+		[
+		model "models/swarm/ammo/ammohvyrifle.mdl"
+		]
+	]
